@@ -1,9 +1,9 @@
 {
   "name": "lint2prompt",
   "displayName": "lint2prompt",
-  "description": "A Visual Studio Code extension that gathers linting and diagnostic information from your workspace, optionally filters out specified linters, and copies a summarized, LLM-friendly report to your clipboard—complete with customizable prefix and suffix text. This makes it easy to feed your diagnostic details into an AI chat or other tool for quick advice and fixes.",
+  "description": "A VS Code extension that collects workspace linting and diagnostic details, optionally filters linters, and copies a concise, LLM-friendly report to clipboard—with customizable prefix/suffix—enabling quick AI-powered code analysis and troubleshooting.",
   "icon": "assets/images/icon.png",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "repository": {
     "type": "git",
     "url": "https://github.com/a322655/lint2prompt.git"
