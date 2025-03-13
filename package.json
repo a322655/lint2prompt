@@ -1,0 +1,74 @@
+{
+  "name": "lint2prompt",
+  "displayName": "lint2prompt",
+  "description": "A Visual Studio Code extension that gathers linting and diagnostic information from your workspace, optionally filters out specified linters, and copies a summarized, LLM-friendly report to your clipboard—complete with customizable prefix and suffix text. This makes it easy to feed your diagnostic details into an AI chat or other tool for quick advice and fixes.",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/a322655/lint2prompt.git"
+  },
+  "engines": {
+    "vscode": "^1.93.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "lint2prompt.runLint2prompt",
+        "title": "Run lint2prompt"
+      }
+    ],
+    "configuration": {
+      "title": "lint2prompt",
+      "properties": {
+        "lint2prompt.linterIgnored": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [],
+          "description": "List of linter names to ignore (e.g., 'eslint', 'cSpell'). Any diagnostics from these linters will be excluded."
+        },
+        "lint2prompt.promptPrefix": {
+          "type": "string",
+          "default": "For the code present, we get these lints:",
+          "description": "Text to add before the linter output in the prompt"
+        },
+        "lint2prompt.promptSuffix": {
+          "type": "string",
+          "default": "How can I resolve this? If you propose a fix, please make it concise.",
+          "description": "Text to add after the linter output in the prompt"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test",
+    "build": "node ./esbuild.js",
+    "package": "NODE_ENV=production node ./esbuild.js",
+    "dev": "node ./esbuild.js --watch"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.93.0",
+    "@typescript-eslint/eslint-plugin": "^8.25.0",
+    "@typescript-eslint/parser": "^8.25.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "esbuild-plugin-copy": "^2.1.1",
+    "eslint": "^9.21.0",
+    "typescript": "^5.7.3"
+  }
+}
