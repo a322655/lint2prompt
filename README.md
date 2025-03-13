@@ -4,8 +4,6 @@ A Visual Studio Code extension that gathers linting and diagnostic information f
 
 _Read this in [简体中文](README_zh-cn.md)_
 
----
-
 ## Features
 
 - **Consolidated Diagnostics**
@@ -22,8 +20,6 @@ _Read this in [简体中文](README_zh-cn.md)_
 
 - **On-Demand Command**
   Quickly trigger the extension with the “Run lint2prompt” command.
-
----
 
 ## Prerequisites
 
@@ -43,7 +39,7 @@ _Read this in [简体中文](README_zh-cn.md)_
    1. Clone this repository:
 
       ```bash
-      git clone https://github.com/yourusername/lint2prompt.git
+      git clone https://github.com/a322655/lint2prompt.git
       cd lint2prompt
       ```
 
@@ -63,8 +59,6 @@ _Read this in [简体中文](README_zh-cn.md)_
       - Open the project in VS Code
       - Press `F5` to start the extension in a new VS Code window
 
----
-
 ## Usage
 
 1. **Open your project** in Visual Studio Code.
@@ -74,8 +68,6 @@ _Read this in [简体中文](README_zh-cn.md)_
 5. If diagnostics are found, a summarized, LLM-friendly report is copied to your **clipboard**. If no problems are found, you’ll see a message indicating nothing to copy.
 
 You can then paste the copied text into your AI chat or any desired environment to discuss fixes or improvements.
-
----
 
 ## Configuration
 
@@ -108,8 +100,6 @@ Inside your VS Code `settings.json`, you can modify the following settings under
 
 These options allow you to tailor the extension to your workflow and any AI prompts you frequently use.
 
----
-
 ## Contribution Guidelines
 
 Contributions are welcome! If you’d like to help:
@@ -121,8 +111,6 @@ Contributions are welcome! If you’d like to help:
 5. Open a **Pull Request** with a clear description of your changes.
 
 Feel free to open an **Issue** if you encounter any bugs or have suggestions.
-
----
 
 ## Testing
 
@@ -137,13 +125,9 @@ npm run test
 
 This will compile the extension, run linting, and then start the test runner.
 
----
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
-
----
 
 ## Acknowledgements
 
