@@ -2,9 +2,13 @@
 
 All notable changes to the "lint2prompt" extension will be documented in this file.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+## [0.0.1] - 2025-03-13
 
-## [Unreleased]
+### Added
 
-- Initial release
-  
+- Initial release of lint2prompt
+- Convert lint errors and warnings to AI prompts
+- Support for ESLint, TSLint, and StyleLint
+- Quick fix suggestions based on AI recommendations
+- Configuration options for prompt customization
+- Support for VSCode's Problems panel integration
